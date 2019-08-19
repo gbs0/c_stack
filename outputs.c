@@ -13,6 +13,12 @@ int foo() {
 	int x, y;
 	char text[20];
 
+	// Print 4.42
+	printf("%3.2f", 4.4267893);
+	// 3 = total number of characters include space decimal everything
+	// 2 = number of letters after decimal 
+	// f = float used for decimal numbers
+
 	scanf("%2d %d %*f %5s", &x, &y, text);
 	/* input: 1234  5.7  elephant */
 	
