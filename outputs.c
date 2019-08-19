@@ -18,3 +18,10 @@ int foo() {
 	printf("%d  %d  %s", x, y, text);
 	/* output: 12  34  eleph */ 	
 }
+
+
+int bar()
+{
+	printf("The tree has %d apples.\n", 22);
+	/* The tree has 22 apples. */
+}
