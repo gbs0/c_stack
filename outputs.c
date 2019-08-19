@@ -4,7 +4,7 @@ int main() {
   char a = getchar();
 
   printf("You entered: ");
-  putchar(a);  // Outputs a single character
+  putchar(a);  /* Outputs a single character */
 
   return 0;
 }
@@ -13,11 +13,13 @@ int foo() {
 	int x, y;
 	char text[20];
 
-	// Print 4.42
+	/* Print 4.42 */
 	printf("%3.2f", 4.4267893);
-	// 3 = total number of characters include space decimal everything
-	// 2 = number of letters after decimal 
-	// f = float used for decimal numbers
+	/* 
+	3 = total number of characters include space decimal everything
+	2 = number of letters after decimal 
+	f = float used for decimal numbers
+	*/
 
 	scanf("%2d %d %*f %5s", &x, &y, text);
 	/* input: 1234  5.7  elephant */
@@ -45,10 +47,10 @@ int bar()
 	/* The tree has 22 apples. */
 }
 
-// Escape sequences:
-// \n new line
-// \t horizontal tab
-// \\ backslash
-// \b backspace
-// \' single quote
-// \" double quote
+/* Escape sequences:
+/* \n new line
+/* \t horizontal tab
+/* \\ backslash
+/* \b backspace
+/* \' single quote
+/* \" double quote
