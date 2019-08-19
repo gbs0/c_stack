@@ -1,14 +1,13 @@
 #include <stdio.h>
 
-int main() {
-	char userInput = getchar();	// Gets user input
-
+int main() {  // Get first character from user input
+	char userInput = getchar();
 	printf("You entered: %c\n", userInput);
 	return 0;
 }
 
-int foo () {
-	char a[100]; // Array with 100 strings
+int foo () { // Get 100 character from user input
+	char a[100]; 
 	gets(a); 	// Read input 
 
   printf("You entered: %s", a);
