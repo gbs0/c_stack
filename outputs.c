@@ -47,10 +47,10 @@ int bar()
 	/* The tree has 22 apples. */
 }
 
-/* Escape sequences:
-/* \n new line
-/* \t horizontal tab
-/* \\ backslash
-/* \b backspace
-/* \' single quote
-/* \" double quote
+/* Escape sequences: */
+/* \n new line */
+/* \t horizontal tab */
+/* \\ backslash */
+/* \b backspace */
+/* \' single quote */
+/* \" double quote */
