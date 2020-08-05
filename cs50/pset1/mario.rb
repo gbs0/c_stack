@@ -2,12 +2,11 @@ require 'pry'
 
 class Mario
 	def self.towerBuilder(n_floors)
-		n = n_floors # Put integer into a variable
 		tower = []	 # Empty array for hold final result
 		tower2 = []
 		hashes = '#'	 # Set inital hashes number
 
-		n.times do 	 # First loop for iterate over the number of floors 
+		n_floors.times do 	 # First loop for iterate over the number of floors 
 			tower = tower.map do |space|		# Second loop for add the spaces
 				" #{space}"
 			end
