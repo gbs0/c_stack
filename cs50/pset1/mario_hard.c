@@ -6,12 +6,14 @@
 int main(void)
 {
     bool isValid = false;
-
+    int n_floor;
+    
     do {
-    	// get_int # For pick an integer from the user
-    	printf("")
-    }
-    while() // Make sure the int is beetween 1..8 range
+		printf("Height (1-8):\n");
+		scanf("%d", &n_floor);
+		printf("\n got the number of floors: %d", n_floor);
+
+   	} while(n_floor >= 1 && n_floor <= 8); // Make sure the int is beetween 1..8 range
     
     printf("hello, world\n");
 

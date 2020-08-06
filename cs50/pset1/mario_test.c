@@ -24,23 +24,31 @@ void func(int x)
 int main(void)
 {
    int n_floor;
-   n_floor = -1;
+  //  n_floor = -1;
    
-   while (n_floor != 0)
-   {
-   	 printf("Height (1-8):\n");
+  //  while (n_floor != 0)
+  //  {
+  //  	 printf("Height (1-8):\n");
    	 
-   	 scanf("%d", &n_floor);
+  //  	 scanf("%d", &n_floor);
    	 
-	 printf("\n got the number of floors: %d", n_floor);
+	 // printf("\n got the number of floors: %d", n_floor);
 
-   	 if ((n_floor == 0) | (n_floor == EOF))
-   	 {
+  //  	 if ((n_floor == 0) | (n_floor == EOF))
+  //  	 {
 
-   	 	printf("\n *** You have to enter an integer! ***\n");
-   	 	n_floor = -1;
-   	 }
+  //  	 	printf("\n *** You have to enter an integer! ***\n");
+  //  	 	n_floor = -1;
+  //  	 }
 
-   	 for(int i = 0; i < n_floor; ++i) func(i);
-   }
+  //  	 for(int i = 0; i < n_floor; ++i) func(i);
+
+   	 do {
+   	 	printf("Height (1-8):\n");
+   	 	scanf("%d", &n_floor);
+		printf("\n got the number of floors: %d", n_floor);
+
+
+   	 } while(n_floor >= 1 && n_floor <= 8);
+   // }
 }
