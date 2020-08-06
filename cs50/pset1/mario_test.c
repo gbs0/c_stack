@@ -5,23 +5,45 @@
 
 void func(int x)
 {
-   printf("func(%d): ", x);
+   printf("%d",x);
    switch(x)
    {
-      case 1: printf("       #");
-      case 2: printf("      ##");
+      case 1: printf("       #\n");
+      case 2: printf("      ##\n");
       //  case 3: printf("case 3.\n"); break;
-      case 3: printf("     ###");
-      case 4: printf("    ####");
-      case 5: printf("   #####");
-      case 6: printf("  ######");
-      case 7: printf(" #######");
-      case 8: printf("########");
-      default: printf("default.\n");
+      case 3: printf("     ###\n");
+      case 4: printf("    ####\n");
+      case 5: printf("   #####\n");
+      case 6: printf("  ######\n");
+      case 7: printf(" #######\n");
+      case 8: printf("########\n");
+      default: printf("\n");
    }
 }
  
 int main(void)
 {
-   for(int i = 1; i < 9; ++i) func(i);
+   char line[100];
+   int n_floor;
+
+   n_floor = -1;
+   while (n_floor != 0)
+   {
+   	 printf("\nHeight (1-8):\n");
+   	 
+   	 fgets(line, sizeof(line), STDIN);
+   	 scan_f_result = scanf(line, "%d", &n_floor);
+
+   	 if ((scan_f_result == 0) | (scan_f_result == EOF))
+   	 {
+   	 	printf("\n the line is: %i", line);
+   	 	printf("\n *** You have to enter an integer! ***\n");
+   	 	n_floor = -1;
+   	 }
+   }
+   
+   // const int n_floor = scanf("%i", &input);
+   // printf("got the number: %d", n_floors);
+
+   for(int i = 0; i < n_floor; ++i) func(i);
 }
