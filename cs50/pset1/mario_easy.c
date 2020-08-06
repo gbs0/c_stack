@@ -28,7 +28,7 @@ int main(void)
 		printf("Height (1-8):\n");
 		scanf("%d", &n_floor);
 
-		if (n_floor > 8) break;
+		if (n_floor > 8 && n_floor < 1) printf("%s\n **** Only nº beetween 1 and 8 are valid");
 
 		// for(int i = 0; i < n_floor; ++i) {
 		// 	printf("%s\n", "#");
