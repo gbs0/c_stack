@@ -8,9 +8,9 @@ void func(int x)
    
    switch(x)
    {
-      case 1: printf("#\n"); break;
-      case 2: printf("#\n##\n"); break;
-      case 3: printf("#\n##\n###\n"); break;
+      case 1: printf("#  #\n"); break;
+      case 2: printf(" #  #\n##  ##\n"); break;
+      case 3: printf("  #  #\n ##  ##\n###  ###\n"); break;
       case 4: printf("#\n##\n###\n####\n"); break;
       case 5: printf("#\n##\n###\n####\n#####\n"); break ;
       case 6: printf("#\n##\n###\n####\n#####\n######\n"); break;
@@ -35,6 +35,7 @@ int main(void)
 		// }
 
 		func(n_floor);
+
 
    	} while(n_floor >= 1 && n_floor <= 8); // Make sure the int is beetween 1..8 range
 }	
