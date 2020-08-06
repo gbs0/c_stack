@@ -27,14 +27,14 @@ int main(void)
     int n_floor;
     
     do {
+		if (n_floor > 8) break;
+
 		printf("Height (1-8):\n");
 		scanf("%d", &n_floor);
-		printf("\n got the number of floors: %d \n", n_floor);
-
-   	}while(n_floor >= 1 && n_floor <= 8); // Make sure the int is beetween 1..8 range
-    
-	for(int i = 0; i < n_floor; ++i) {
-		printf("%s\n", "#");
-	}
+		
+		for(int i = 0; i < n_floor; ++i) {
+			printf("%s\n", "#");
+		}
+   	} while(n_floor >= 1 && n_floor <= 8); // Make sure the int is beetween 1..8 range
 }	
 
