@@ -33,6 +33,8 @@ int main(void)
 
    	}while(n_floor >= 1 && n_floor <= 8); // Make sure the int is beetween 1..8 range
     
-	for(int i = 0; i < n_floor; ++i) func(i);
+	for(int i = 0; i < n_floor; ++i) {
+		printf("%s\n", "#");
+	}
 }	
 
