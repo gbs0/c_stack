@@ -16,7 +16,7 @@ int main(void)
 		printf("Insert Money:\n");
     printf("$");
 		scanf("%f", &dollars );
-    printf("%d\n", dollars);
+    printf("%f\n", dollars);
     
     cents = (int)round(dollars * 100);
 		printf("%d\n", cents);
