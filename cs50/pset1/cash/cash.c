@@ -2,6 +2,7 @@
 #include <math.h>
 #include <string.h>
 #include <stdbool.h>
+#include <floats.c>
 
 
 int main(void)
@@ -15,10 +16,11 @@ int main(void)
     do {
 		printf("Insert Money:\n");
     printf("$");
-		scanf("%f", &dollars );
+
+		scanf("%f", &dollars ); // Get value from terminal
     printf("%f\n", dollars);
     
-    cents = (int)round(dollars * 100);
+    cents = (int)round(dollars * 100); // Converting entered amount 
 		printf("%d\n", cents);
     // for(int i = 0; i < dollars ; ++i) {
 		// 	printf("%s\n", "#");
