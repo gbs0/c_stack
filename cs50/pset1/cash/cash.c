@@ -6,17 +6,24 @@
 
 int main(void)
 {
-    float cashInput;
+    int cents = 0;
+    int notes[] = { 1, 2, 5, 10, 20, 50, 100, 200 };
+    int coins[] = { 25, 10, 5, 1 };
+
+    float dollars;
     
     do {
-		printf("Inser Money:\n");
-		scanf("%d", &cashInput );
-
-		// for(int i = 0; i < cashInput ; ++i) {
+		printf("Insert Money:\n");
+    printf("$");
+		scanf("%f", &dollars );
+    printf("%d\n", dollars);
+    
+    cents = (int)round(dollars * 100);
+		printf("%d\n", cents);
+    // for(int i = 0; i < dollars ; ++i) {
 		// 	printf("%s\n", "#");
 		// }
 
-
-   	} while(cashInput  >= 1 && cashInput  <= 8); // Make sure the int is beetween 1..8 range
+   	} while(dollars  >= 1 && dollars  <= 8); // Make sure the int is beetween 1..8 range
 }	
 
