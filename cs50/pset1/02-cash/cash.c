@@ -3,13 +3,14 @@
 #include <string.h>
 #include <stdbool.h>
 
-int calcDraw(int cents)
+int * calcDraw(int cents)
 {
     
+    static int draw[64];
     int amount_left = 0;
-    int coins[] = [ 1, 5, 10, 25 ];
+    int coins[] = { 1, 5, 10, 25 };
     // int notes[] = { 1, 2, 5, 10, 20, 50, 100, 200 };
-    int draw[] = [];
+    // int *draw[64];
 
     int n = 4; // Size of coins array
     int i = n - 1;
@@ -38,7 +39,7 @@ int main(void)
     scanf("%f", &dollars ); // Get value from terminal
     printf("%f\n", dollars);
     
-    cents = (int)round(dollars * 100); // Converting entered amount by 100, o factor with coin integer
+    int cents = (int)round(dollars * 100); // Converting entered amount by 100, o factor with coin integer
     printf("%d\n", cents);
     
     // for(int i = 0; i <= 5; i++)
