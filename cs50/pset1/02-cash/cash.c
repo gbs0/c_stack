@@ -26,7 +26,9 @@ int * calcDraw(int cents)
     
     } while (i >= 0);
 
+    
     return draw;
+    printf("Populated array");
 }
 
 int main(void)
@@ -42,39 +44,6 @@ int main(void)
     int cents = (int)round(dollars * 100); // Converting entered amount by 100, o factor with coin integer
     printf("%d\n", cents);
     
-    // for(int i = 0; i <= 5; i++)
-    // {
-    //   if (cents % coins[0] != 0)
-    //   {
-    //     cents -= coins[0];
-    //     amount += 1;
-    //     printf("%d\n", cents);
-
-    //   }
-    //   else if(cents % coins[1] != 0)
-    //   {
-    //     cents -= coins[1];
-    //     amount += 1;
-    //     printf("%d\n", cents);
-    //   }
-    //   else if(cents % coins[2] != 0)
-    //   {
-    //     cents -= coins[2];
-    //     amount += 1;
-    //     printf("%d\n", cents); 
-    //   }
-    //   else if(cents % coins[3] != 0)
-    //   {
-    //     cents -= coins[3];
-    //     amount += 1;
-    //     printf("%d\n", cents); 
-    //   }  
-    // }
-    
-    
-    // for(int i = 0; i < dollars ; ++i) {
-    //  printf("%s\n", "#");
-    // }
-    printf("%d\n", cents);
+    printf("%i\n", *calcDraw(cents));
 }	
 
