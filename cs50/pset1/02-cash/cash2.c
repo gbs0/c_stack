@@ -2,12 +2,15 @@
 // number of denominations 
 #include <stdio.h> 
 #include <math.h>
-#define COINS 9 
+#define COINS 4 
+#define NOTES 9
 #define MAX 20 
   
 // All denominations of Indian Currency 
-int coins[COINS] = { 1, 2, 5, 10, 20, 
+int notes[NOTES] = { 1, 2, 5, 10, 20, 
                      50, 100, 200, 2000 }; 
+
+int coins[COINS] = { 1, 5, 10, 25 }; 
   
 void findMin(int cost) 
 { 
@@ -22,11 +25,12 @@ void findMin(int cost)
         } 
     } 
   
-    for (i = 0; i < k; i++) { 
-        // Print 
-        printf("%d ", coinList[i]); 
-    } 
-    return; 
+    // for (i = 0; i < k; i++) { 
+    //     // Print 
+    //     printf("%d ", coinList[i]); 
+    // } 
+    printf("%d ", sizeof(coinList));
+    return;
 } 
   
 int main(void) 
@@ -41,14 +45,13 @@ int main(void)
         scanf("%f", &dollars ); // Get value from terminal
         printf("%f\n", dollars);
         
-        // if (!dollars) {
-        //     printf("Saindo do Loop...\n");
-        //     break;
-        // }
-
-        int cents = (int)round(dollars * 100); // Converting entered amount by 100, o factor with coin integer
+        int cents = (int)round(dollars * 100);
 
         printf("Following is minimal number "
+               "of change for %d: ", 
+               cents); 
+        findMin(cents); 
+        printf("Fina"
                "of change for %d: ", 
                cents); 
         findMin(cents); 
