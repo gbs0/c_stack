@@ -36,7 +36,7 @@ int main(void)
 
     do
     {
-        printf("Insert Money:\n");
+        printf("\nInsert Money:\n");
         printf("$");
         scanf("%f", &dollars ); // Get value from terminal
         printf("%f\n", dollars);
