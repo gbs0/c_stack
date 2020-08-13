@@ -14,11 +14,11 @@ class Caesar
   	cyphertext = []
 
 
-  	plaintext.each{ |letter| cyphertext.push(letter.bytes) }
+  	plaintext.each{ |letter| letter.match(/[ˆa-z]/i) ? cyphertext.push(letter.bytes) : cyphertext.push(letter) }
 
 
 
-  	
+
   	cyphertext.each{ |ascii| puts ascii[0].chr } # Converting all ascci back to string
   	
   end
