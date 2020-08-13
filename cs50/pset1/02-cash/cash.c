@@ -48,7 +48,7 @@ int main(void)
         
         int cents = (int)round(dollars * 100);
 
-        printf("Fina"
+        printf("Final"
                "of change for %d: ", 
                cents); 
         findMin(cents); 
