@@ -9,14 +9,25 @@ class Caesar
   end
 
   def calcCypher
-  	# cypher_index = (plain_index + args_key) % 26 # Factor for get key cypher index
-  	puts @plaintext
-  	# puts ("cyphertext: #{cyphertext}")
+  	# cypher_index = (plain_index + args_key) % 26 # Factor for get key cypher index	
+  	plaintext = @plaintext.split('')
+  	cyphertext = []
+
+
+  	plaintext.each{ |letter| cyphertext.push(letter.bytes) }
+
+
+
+  	
+  	cyphertext.each{ |ascii| puts ascii[0].chr } # Converting all ascci back to string
+  	
   end
+
+  
 
 end
 
 c = Caesar.new
 
-c.calcCypher()
+c.calcCypher
 
