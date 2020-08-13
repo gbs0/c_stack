@@ -25,11 +25,11 @@ void findMin(int cost)
         } 
     } 
   
-    // for (i = 0; i < k; i++) { 
-    //     // Print 
-    //     printf("%d ", coinList[i]); 
-    // } 
-    printf("%d ", sizeof(coinList));
+    for (i = 0; i < k; i++) { 
+        // Print 
+        printf("%d ", coinList[i]); 
+    }
+    // printf("%d ", sizeof(coinList));
     return;
 } 
   
@@ -40,6 +40,7 @@ int main(void)
 
     do
     {
+        
         printf("\nInsert Money:\n");
         printf("$");
         scanf("%f", &dollars ); // Get value from terminal
@@ -47,14 +48,10 @@ int main(void)
         
         int cents = (int)round(dollars * 100);
 
-        printf("Following is minimal number "
-               "of change for %d: ", 
-               cents); 
-        findMin(cents); 
         printf("Fina"
                "of change for %d: ", 
                cents); 
         findMin(cents); 
-        //   return 0;
+        return 0;
     } while (dollars != 0.0);
 }
