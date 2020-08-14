@@ -1,17 +1,23 @@
 #include<math.h>
-#include<stdin.h>
+#include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
-#include <ctype.h>
+#include<ctype.h>
+#include<regex.h>
 
-int main(void)
+
+int main(int argc, string argv[])
 {
-	
 	// get argv[1] & 2 (check if contains only digit)
-	// Convert string to integer
+	if (argc != 2 || regcomp(argv[1], "/[ˆa-z]/i"))
+	{
+		printf("Usage ./caesar key");
+		return 1;
+	}
 
-
+	int key = atoi(argv[1]);
 	
+
 	// get_string for user
 	// string text = 'This is CS50';
 	// text[0] => 'T'
