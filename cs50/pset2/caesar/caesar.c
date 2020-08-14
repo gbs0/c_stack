@@ -6,10 +6,10 @@
 #include<regex.h>
 
 
-int main(int argc, string argv[])
+int main(int argc, char *argv[]) // get string for user
 {
-	// get argv[1] & 2 (check if contains only digit)
-	if (argc != 2 || regcomp(argv[1], "/[ˆa-z]/i"))
+	
+	if (argc != 2 || regcomp(argv[1], "/[ˆa-z]/i")) // get argv[1] & 2 (check if contains only digit)
 	{
 		printf("Usage ./caesar key");
 		return 1;
@@ -17,17 +17,21 @@ int main(int argc, string argv[])
 
 	int key = atoi(argv[1]);
 	
+	char plaintext = get_string("plaintext: ");
 
-	// get_string for user
-	// string text = 'This is CS50';
+	printf("ciphertext: ");
+	
+	// for (int i = 0; int len = strlen(plaintext); i < len; i++) // For loop for encipher each caracther
+	// {
+
+	// }
+	
 	// text[0] => 'T'
 	// text[1] => 'h'
 	// text[2] => 'i'
 	// string.length == strlen(text) => 12
 
 
-
-	// For loop for encipher one caracther
 	// 
 	// Functions that may be usefull:
 	// isalpha('A') => true
