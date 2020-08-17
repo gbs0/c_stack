@@ -8,19 +8,24 @@
 
 int main(int argc, char *argv[]) // get string for user
 {
+	// int reti;
+	// reti = regcomp(argv[1], "/[ˆa-z]/i", 0);
 	
-	if (argc != 2 || regcomp(argv[1], "/[ˆa-z]/i")) // get argv[1] & 2 (check if contains only digit)
+	if (argc != 2) // get argv[1] & 2 (check if contains only digit)
 	{
 		printf("Usage ./caesar key");
 		return 1;
 	}
 
-	int key = atoi(argv[1]);
+	int key = atoi(argv[1]); // converting to integer
 	
-	char plaintext = get_string("plaintext: ");
+	// char plaintext = get_string("plaintext: ");
 
 	printf("ciphertext: ");
+	printf("%d\n", key);
+	printf("%s\n", argv[2]);
 	
+
 	// for (int i = 0; int len = strlen(plaintext); i < len; i++) // For loop for encipher each caracther
 	// {
 
