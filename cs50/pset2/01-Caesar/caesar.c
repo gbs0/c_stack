@@ -8,25 +8,20 @@
 
 int main(int argc, char *argv[]) // get string for user
 {
-	char plaintext;
-	// int reti;
-	// reti = regcomp(argv[1], "/[ˆa-z]/i", 0);
 	
-
 	if (argc != 2) // get argv[0] & argv[1] (check if contains only digit)
 	{
 		printf("Usage ./caesar key");
 		return 1;
 	}
 
-	int key = atoi(argv[1]); // converting to integer
+	int key = atoi(argv[1]); // Display what the key index
 	printf("key: ");
 	printf("%d\n", key);
 
-	printf("%s", "plaintext: ");
-	
-	scanf("%s", &plaintext ); // Get value from terminal
-	
+	printf("%s", "plaintext: "); // Ask for an plaintext
+	char plaintext;
+	scanf("%s", &plaintext );
 	printf("%s\n", &plaintext);
 	
 

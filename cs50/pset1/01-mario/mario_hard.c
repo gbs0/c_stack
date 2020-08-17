@@ -22,19 +22,19 @@ int main(void)
 {
     int n_floor;
     
-    do {
-		printf("Height (1-8):\n");
-		scanf("%d", &n_floor);
+    do 
+    {
+  		printf("Height (1-8):\n");
+  		scanf("%d", &n_floor);
 
-		if (n_floor > 8) break;
+  		if (n_floor > 8) break;
 
-		// for(int i = 0; i < n_floor; ++i) {
-		// 	printf("%s\n", "#");
-		// }
+  		// for(int i = 0; i < n_floor; ++i) {
+  		// 	printf("%s\n", "#");
+  		// }
 
-		func(n_floor);
-
-
-   	} while(n_floor >= 1 && n_floor <= 8); // Make sure the int is beetween 1..8 range
+  		func(n_floor);
+      
+   	} while(n_floor >= 1 && n_floor <= 8);
 }	
 
