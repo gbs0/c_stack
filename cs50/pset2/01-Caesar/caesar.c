@@ -19,18 +19,16 @@ int main(int argc, char *argv[]) // get string for user
 	printf("%s", "plaintext: "); // Ask for an plaintext
 	char plaintext;
 	scanf("%s", &plaintext);
-	printf("%s\n", &plaintext);
-	
 	
 	for (int i = 0, len = strlen(&plaintext); i < len; i++) // For loop for encipher each caracther
 	{
- 		char l = plaintext;
+ 		char l = strlen(&plaintext);
  		if(isalpha(l))
  		{
- 			l++;
- 			printf("%c\n", l + i);
+ 			printf("%c\n", l);
  		}
 	}
+	
 	
 	
 	// text[0] => 'T'

@@ -5,16 +5,32 @@ class Caesar
 
   def initialize
   	@args_key = ARGV[0];
-	@plaintext = ARGV[1];
+	  @plaintext = ARGV[1];
   end
 
   def calcCypher
   	# cypher_index = (plain_index + args_key) % 26 # Factor for get key cypher index	
-  	plaintext = @plaintext.split('')
+  	key = @args_key.to_i    
   	cyphertext = []
 
 
-  	plaintext.each{ |letter| letter.match(/[ˆa-z]/i) ? cyphertext.push(letter.bytes) : cyphertext.push(letter) }
+  	# @plaintext.each_char{|l| p true if l.match(/[ˆa-z]/i)}
+    # @plaintext.each_char{ |letter| letter.match(/[ˆa-z]/i) ? cyphertext.push(letter.bytes) : cyphertext.push(letter) }
+    @plaintext.each_char do |l|
+      if (l.match?(/[ˆa-z]/i))
+
+        if(l.match?(/[[:upper:]]/))
+          char_byte = l.bytes.first.to_i
+          low_ascii = "a".bytes[0]
+          puts (char_byte - low_ascii + key) % 26 + low_ascii
+        end
+
+      else
+
+
+
+      end
+    end
 
 
 
