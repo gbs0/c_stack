@@ -1,5 +1,3 @@
-require 'pry'
-
 class Caesar
   ALPHA = [*"A".."Z"]
 
@@ -9,36 +7,39 @@ class Caesar
   end
 
   def calcCypher
-  	# cypher_index = (plain_index + args_key) % 26 # Factor for get key cypher index	
   	key = @args_key.to_i  
     plaintext = @plaintext.to_s  
   	cyphertext = []
 
 
     plaintext.each_char do |l|
-      
       if (l.match?(/[ˆa-z]/i))
 
-        if(l.match?(/[[:upper:]]/))
-          cyphertext.push((l.bytes.first[0] - "A".bytes.first + key) % 26 + "A".bytes.first)
-          binding.pry
+        
+        if (l.match?(/[[:upper:]]/))
+          cyphertext.push(calcIndex({letterToAscii: l.bytes[0], caseToAscii: "A".bytes.first, key: key}))
+        else
+          cyphertext.push(calcIndex(letterToAscii: l.bytes[0], caseToAscii: "a".bytes.first, key: key))  
         end
 
+
+      else
+
+        cyphertext.push(l)
+      
       end
     end
 
-  	# cyphertext.each{ |ascii| puts ascii[0].chr } # Converting all ascci back to string
-    p cyphertext	
+  	cyphertext.each { |ascii| print ascii.chr }
+
   end
 
-  private
-
-  def calcIndex(letterToAscii, caseToAscii)
-    (letterToAscii - caseToAscii)
+  def calcIndex(attr)
+    attr[:letterToAscii] - attr[:caseToAscii] + attr[:key] % 26 + attr[:caseToAscii]
   end
+
 end
 
 c = Caesar.new
-
 c.calcCypher
 
