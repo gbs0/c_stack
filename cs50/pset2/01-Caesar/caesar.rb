@@ -1,7 +1,7 @@
 require 'pry'
-# Caesar script for encrypt some string
+
 class Caesar
-  ALPHA = [*"A".."Z"] # Range for alphabet
+  ALPHA = [*"A".."Z"]
 
   def initialize
   	@args_key = ARGV[0];
@@ -10,37 +10,32 @@ class Caesar
 
   def calcCypher
   	# cypher_index = (plain_index + args_key) % 26 # Factor for get key cypher index	
-  	key = @args_key.to_i    
+  	key = @args_key.to_i  
+    plaintext = @plaintext.to_s  
   	cyphertext = []
 
 
-  	# @plaintext.each_char{|l| p true if l.match(/[ˆa-z]/i)}
-    # @plaintext.each_char{ |letter| letter.match(/[ˆa-z]/i) ? cyphertext.push(letter.bytes) : cyphertext.push(letter) }
-    @plaintext.each_char do |l|
+    plaintext.each_char do |l|
+      
       if (l.match?(/[ˆa-z]/i))
 
         if(l.match?(/[[:upper:]]/))
-          char_byte = l.bytes.first.to_i
-          low_ascii = "a".bytes[0]
-          puts (char_byte - low_ascii + key) % 26 + low_ascii
+          cyphertext.push((l.bytes.first[0] - "A".bytes.first + key) % 26 + "A".bytes.first)
+          binding.pry
         end
-
-      else
-
-
 
       end
     end
 
-
-
-
-  	cyphertext.each{ |ascii| puts ascii[0].chr } # Converting all ascci back to string
-  	
+  	# cyphertext.each{ |ascii| puts ascii[0].chr } # Converting all ascci back to string
+    p cyphertext	
   end
 
-  
+  private
 
+  def calcIndex(letterToAscii, caseToAscii)
+    (letterToAscii - caseToAscii)
+  end
 end
 
 c = Caesar.new
