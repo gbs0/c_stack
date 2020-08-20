@@ -3,7 +3,7 @@
 #include<string.h>
 #include<ctype.h>
 
-int main(int argc, char *argv[]) // get string for user
+int main(int argc, char *argv[])
 {
 	
 	if (argc != 2) // get argv[0] & argv[1] (check if contains only digit)
@@ -17,25 +17,20 @@ int main(int argc, char *argv[]) // get string for user
 	printf("%d\n", key);
 
 	printf("%s", "plaintext: "); // Ask for an plaintext
-	char plaintext;
-	scanf("%s", &plaintext);
+	char plaintext[50];
+	fgets(plaintext, sizeof(plaintext), stdin);
+	// scanf("%s", &plaintext);
 	
-	for (int i = 0, len = strlen(&plaintext); i < len; i++) // For loop for encipher each caracther
+	for (int i = 0, len = strlen(&plaintext[0]); i < len; i++) // For loop for encipher each caracther
 	{
- 		char l = strlen(&plaintext);
+ 		// char l = strlen(&plaintext);
+ 		char l = plaintext[i];
  		if(isalpha(l))
  		{
  			printf("%c\n", l);
  		}
 	}
 	
-	
-	
-	// text[0] => 'T'
-	// text[1] => 'h'
-	// text[2] => 'i'
-	// string.length == strlen(text) => 12
-
 	// Functions that may be usefull:
 	// isalpha('A') => true
 	// isupper('A') => true
