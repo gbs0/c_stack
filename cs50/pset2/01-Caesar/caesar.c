@@ -5,8 +5,9 @@
 
 int main(int argc, char *argv[])
 {
-	
-	if (argc != 2) // get argv[0] & argv[1] (check if contains only digit)
+	char cyphertext[];
+	s
+	if (argc != 2)
 	{
 		printf("Usage ./caesar key");
 		return 1;
@@ -19,9 +20,8 @@ int main(int argc, char *argv[])
 	printf("%s", "plaintext: "); // Ask for an plaintext
 	char plaintext[50];
 	fgets(plaintext, sizeof(plaintext), stdin);
-	// scanf("%s", &plaintext);
 	
-	for (int i = 0, len = strlen(&plaintext[0]); i < len; i++) // For loop for encipher each caracther
+	for (int i = 0, len = strlen(&plaintext[0]); i < len; i++)
 	{
  		// char l = strlen(&plaintext);
  		char l = plaintext[i];
@@ -42,6 +42,7 @@ int main(int argc, char *argv[])
 	// Convert result back to ASCII
 
 
+	for (int i = 0, len = strlen())
 	// printing the result
 
 }
