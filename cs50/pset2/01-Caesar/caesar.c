@@ -3,23 +3,28 @@
 #include<string.h>
 #include<ctype.h>
 
+typedef unsigned char BYTE;
+
 int main(int argc, char *argv[])
 {
-	char cyphertext[50];
-
 	if (argc != 2)
 	{
 		printf("Usage ./caesar key");
 		return 1;
 	}
 
+	char cyphertext[50];
+	char plaintext[50];
+	BYTE cy_ascii[50];
+
 	int key = atoi(argv[1]); // Display what the key index
 	printf("key: ");
 	printf("%d\n", key);
 
+	
 	printf("%s", "plaintext: "); // Ask for an plaintext
-	char plaintext[50];
 	fgets(plaintext, sizeof(plaintext), stdin);
+
 	
 	for (int i = 0, len = strlen(&plaintext[0]); i < len; i++)
 	{
@@ -27,8 +32,12 @@ int main(int argc, char *argv[])
  		char l = plaintext[i];
  		if(isalpha(l))
  		{
- 			printf("%c\n", l);
+ 			if(islower(l))
+ 			{
+ 				
+ 			}
  		}
+
 	}
 	
 	// Functions that may be usefull:
