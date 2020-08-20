@@ -5,8 +5,8 @@
 
 int main(int argc, char *argv[])
 {
-	char cyphertext[];
-	s
+	char cyphertext[50];
+
 	if (argc != 2)
 	{
 		printf("Usage ./caesar key");
@@ -41,8 +41,11 @@ int main(int argc, char *argv[])
 	// Shift letter index using formula
 	// Convert result back to ASCII
 
-
-	for (int i = 0, len = strlen())
+	for (int i = 0, len = strlen(&cyphertext[0]); i < len; i++)
+	{
+		char letter = cyphertext[0];
+		printf("%c", letter);
+	}
 	// printing the result
 
 }
