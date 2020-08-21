@@ -30,14 +30,15 @@ int main(int argc, char *argv[])
 	{
  		// char l = strlen(&plaintext);
  		char l = plaintext[i];
+ 		
+ 		
  		if(isalpha(l))
  		{
  			if(islower(l))
  			{
- 				printf("%c\n", l);
+ 				printf("%d\n", l);
  			}
  		}
-
 	}
 	
 	// Functions that may be usefull:
