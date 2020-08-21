@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
  		{
  			if(islower(l))
  			{
- 				
+ 				printf("%c\n", l);
  			}
  		}
 
