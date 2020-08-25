@@ -31,13 +31,18 @@ int main(int argc, char *argv[])
  		// char l = strlen(&plaintext);
  		char l = plaintext[i];
  		
- 		
  		if(isalpha(l))
  		{
  			if(islower(l))
  			{
- 				printf("%d\n", l);
- 			}
+				int ascii = l;
+				int cypherWord = (ascii - 97 + key) % 26 + 97;
+				printf("%d\n", cypherWord);
+
+ 			} else {
+				
+			}
+			
  		}
 	}
 	
