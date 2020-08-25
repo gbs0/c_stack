@@ -3,8 +3,6 @@
 #include<string.h>
 #include<ctype.h>
 
-typedef unsigned char BYTE;
-
 int main(int argc, char *argv[])
 {
 	if (argc != 2)
@@ -13,54 +11,35 @@ int main(int argc, char *argv[])
 		return 1;
 	}
 
-	char cyphertext[50];
 	char plaintext[50];
-	BYTE cy_ascii[50];
-
 	int key = atoi(argv[1]); // Display what the key index
+
 	printf("key: ");
 	printf("%d\n", key);
-
-	
 	printf("%s", "plaintext: "); // Ask for an plaintext
 	fgets(plaintext, sizeof(plaintext), stdin);
+	printf("%s", "cyphertext: ");
 
-	
 	for (int i = 0, len = strlen(&plaintext[0]); i < len; i++)
 	{
  		// char l = strlen(&plaintext);
  		char l = plaintext[i];
+ 		int ascii = l;
  		
- 		if(isalpha(l))
+		 if(isalpha(l))
  		{
  			if(islower(l))
  			{
-				int ascii = l;
 				int cypherWord = (ascii - 97 + key) % 26 + 97;
-				printf("%d\n", cypherWord);
+				printf("%c", cypherWord);
 
  			} else {
-				
+				int cypherWord = (ascii - 65 + key) % 26 + 65;
+				printf("%c", cypherWord);
 			}
-			
- 		}
+ 		} else
+		{
+		    printf("%c", l);
+		}	
 	}
-	
-	// Functions that may be usefull:
-	// isalpha('A') => true
-	// isupper('A') => true
-	// islower('A') => false
-	// Formula cyphertext[i] = (plaintext[i] + key) % 26
-
-	// ASCII Convertion to alphabetical index // bytes for each letter
-	// Shift letter index using formula
-	// Convert result back to ASCII
-
-	for (int i = 0, len = strlen(&cyphertext[0]); i < len; i++)
-	{
-		char letter = cyphertext[0];
-		printf("%c", letter);
-	}
-	// printing the result
-
 }
