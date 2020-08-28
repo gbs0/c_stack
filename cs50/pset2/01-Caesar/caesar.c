@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
  		char l = plaintext[i];
  		int ascii = l;
  		
-		 if(isalpha(l))
+		if(isalpha(l))
  		{
  			if(islower(l))
  			{

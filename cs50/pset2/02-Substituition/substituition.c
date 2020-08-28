@@ -12,6 +12,17 @@ int main(int argc, char *argv[])
 	}
 
 	char plaintext[50];
-	char* keyCypher = argv[1];
-	printf("%s", keyCypher);
+	char* alphaCypher = argv[1];
+	
+	printf("%s\n", alphaCypher);
+	printf("%s", "plaintext: "); // Ask for an plaintext
+	fgets(plaintext, sizeof(plaintext), stdin);
+	printf("%s", plaintext);
+	printf("%s", "cyphertext: ");
+
+	for(int i = 0, len = strlen(&plaintext[0]); i < len; i++)
+	{
+		char l = plaintext[i];
+	}
+
 }
