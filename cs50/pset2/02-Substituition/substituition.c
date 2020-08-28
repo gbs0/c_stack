@@ -23,6 +23,13 @@ int main(int argc, char *argv[])
 	for(int i = 0, len = strlen(&plaintext[0]); i < len; i++)
 	{
 		char l = plaintext[i];
+		int ascii = l;
+
+		if(isalpha(l));
+		{
+			int cypherWord = 0;
+			printf("%c", cypherWord);
+		}
 	}
 
 }
