@@ -1,23 +1,5 @@
 /****************************************************************************
  * CC50 Library for simplifying C input 
- * 
- * Gabriel Lima Guimarães <gabriellimaguimaraes@gmail.com>
- *  
- *  
- * To compile as a standard library in your Ubuntu/Debian computer use:
- * 
- * sudo apt-get install gcc
- * gcc -c -ggdb -std=c99 cc50.c -o cc50.o
- * ar rcs libcc50.a cc50.o
- * chmod 0644 cc50.h libcc50.a
- * sudo mkdir -p /usr/local/include
- * sudo chmod 0755 /usr/local/include
- * sudo mv cc50.h /usr/local/include
- * sudo mkdir -p /usr/local/lib
- * sudo chmod 0755 /usr/local/lib
- * sudo mv libcc50.a /usr/local/lib
- * 
- *  
  * Based on the CS50 Library by:
  * 
  * Glenn Holloway <holloway@eecs.harvard.edu>
