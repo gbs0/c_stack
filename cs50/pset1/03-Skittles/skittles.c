@@ -11,22 +11,23 @@ int main(void)
 
 	do
 	{
-	  scanf("%d", &guess);
+		scanf("%d", &guess);
 
-	  switch(guess) {
-	  	case (guess <= 1):
-		  printf("Haha! Tenho muito mais que isso!\n");
-		  break;
-		case (guess >= 1023):
-		  printf("Ok, não são tantos assim. Tente novamente.\n");
-		  break;
-		case (guess > skittlesCount):
-	  	  printf("%s\n", "Tenho menos do que isso!\n");
-	  	  break;
-	  	case (guess < skittlesCount):
+	  	if (guess <= 1) {
+			printf("Haha! Tenho muito mais que isso!\n");
+	  	}
+
+		if (guess >= 1023) {
+			printf("Ok, não são tantos assim. Tente novamente.\n");
+		}
+
+		if (guess > skittlesCount) {
+	  		printf("%s\n", "Tenho menos do que isso!\n");
+	  	}
+	  	
+	  	if (guess < skittlesCount) {
 	  	  printf("%s\n", "Tenho mais do que isso!\n");
-	  	  break;`
-	  }
+	  	}
 
 	} while (guess != skittlesCount);
 
