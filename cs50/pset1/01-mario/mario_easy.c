@@ -30,12 +30,13 @@ int main(void)
 
 		if (n_floor > 8 && n_floor < 1) printf("%s\n **** Only nº beetween 1 and 8 are valid");
 
-		// for(int i = 0; i < n_floor; ++i) {
-		// 	printf("%s\n", "#");
-		// }
+		
 
-		func(n_floor);
+		func(n_floor); // Or without function:
+    // for(int i = 0; i < n_floor; ++i) {
+    //  printf("%s\n", "#");
+    // }
 
-   	} while(n_floor >= 1 && n_floor <= 8); // Make sure the int is beetween 1..8 range
+   	} while (n_floor >= 1 && n_floor <= 8);
 }	
 
